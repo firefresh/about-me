@@ -1,0 +1,23 @@
+.nav-grid {
+    width: 100%;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr max-content max-content;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: grid;
+}
+
+.nav-link {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 0;
+    line-height: 2px;
+    text-decoration: none;
+    display: block;
+}

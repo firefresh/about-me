@@ -1,0 +1,28 @@
+<div id="resume-tiny" class="flex flex-col mx-20 my-20 space-y-10 text-center text-gray-600">
+  <p class="text-4xl">
+    Hello! I am a <span class="text-green-600">Software Developer</span> and <span class="text-green-600">DevOps Engineer</span> 
+    who is currently developing activities at <a href="https://leafnoise.io" target="_blank" class="text-green-600 hover:underline">Leafnoise</a></p>
+  
+  <a href="https://uba.ar" target="_blank" class="">
+    <p class="text-1xl mt-5">Computer Technician and Computer Engineering student at the <span class="text-green-600 hover:underline">University of Buenos Aires</span>.</p>
+  </a>
+</div>
+
+
+<div id="works" class="flex flex-col mb-20">
+  <h1 class="text-center mb-5">Timeline</h1>
+  <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
+    <ng-template pTemplate="marker" let-event>
+        <span class="custom-marker shadow-2" [style.backgroundColor]="event.color">
+            <i [ngClass]="event.icon"></i>
+        </span>
+    </ng-template>
+    <ng-template pTemplate="content" let-event>
+        <p-card [header]="event.status" [subheader]="event.date">
+            <p>
+                {{ event.text }}
+            </p>
+        </p-card>
+    </ng-template>
+  </p-timeline>
+</div>
